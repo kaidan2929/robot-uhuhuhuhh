@@ -1,0 +1,18 @@
+#include <PRIZM.h>
+PRIZM prizm;
+
+void setup() {
+prizm.PrizmBegin();
+prizm.setMotorInvert(1, 1);
+}
+
+void loop() {
+if (prizm.readLineSensor(5)){
+  prizm.setMotorSpeeds(180,360);
+}else{
+ prizm.setMotorSpeeds(360,180);
+}
+
+
+
+}
